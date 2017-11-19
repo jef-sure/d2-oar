@@ -391,7 +391,7 @@ Automatically decodes JSON parameters if "Content-Type" is application/json.
 Automatically encodes answers to application/json if "Accept" header asks for
 it and returned value is reference. 
 
-IFF L<JSV::Compilator> module was loaded before, then it will be used for
+IFF L<JSV::Compiler> module was loaded before, then it will be used for
 input data validation. Otherwise it checks whether parameter is 
 required or not but doesn't do real validation.
 
