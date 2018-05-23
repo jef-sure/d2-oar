@@ -137,7 +137,7 @@ sub load_schema {
     my $file = File::Spec->catfile($config->{app}->location, $config->{schema});
     if ($config->{schema} =~ /\.json/i) {
         require Path::Tiny;
-        $schema = JSON::from_json(path($file)->slurp_utf8);
+        $schema = JSON::from_json(Path::Tiny::path($file)->slurp_utf8);
     } elsif ($config->{schema} =~ /\.yaml/i) {
         $schema = YAML::XS::LoadFile $file;
     }
